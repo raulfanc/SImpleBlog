@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% block title %}Update Post{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+{# get a bootstrap button here to create #}
+        <button type="submit" class="btn btn-secondary">Update</button>
+    </form>
+
+
+{% endblock %}
