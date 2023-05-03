@@ -1,10 +1,9 @@
 {% extends 'index.html' %}
-{% block title %}Create Post{% endblock %}
+{% block title %}Create Profile{% endblock %}
 
 {% block content %}
-    <form method="post" enctype="multipart/form-data">
+    <form method="post">
         {% csrf_token %}
-        {{ form.media }}
         {{ form.as_p }}
         {# get a bootstrap button here to create #}
         <button type="submit" class="btn btn-primary">Create</button>

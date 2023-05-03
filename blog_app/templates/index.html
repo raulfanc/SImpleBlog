@@ -7,9 +7,9 @@ home
     <!-- only authenticated used can create the post -->
     {% if user.is_authenticated %}
     <!-- Author IN the group -->
-        {% if "author" in user.groups.all.0.name %}
+{#        {% if "author" in user.groups.all.0.name %}#}
             <a href="{% url 'post_create' %}" class="btn btn-primary">New Post</a>
-        {% endif %}
+{#        {% endif %}#}
     {% endif %}
     <ul>
         {% for post in object_list %}

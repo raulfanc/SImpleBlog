@@ -5,6 +5,9 @@
 
 {% block content %}
     {{ post.body}} </br>
+    {% if post.post_image %}
+        <img src="{{ post.post_image.url }}" width="1000px" height="580px">
+    {% endif %}
     {{ post.author}} </br>
     {{ post.category }}
 {% endblock %}

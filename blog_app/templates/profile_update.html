@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Profile Update{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {# get a bootstrap button here to create #}
+        <button type="submit" class="btn btn-success">Update</button>
+    </form>
+{% endblock %}

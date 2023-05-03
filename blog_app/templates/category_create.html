@@ -1,14 +1,10 @@
 {% extends 'index.html' %}
-{% block title %}Create Post{% endblock %}
+{% block title %}Create Category{% endblock %}
 
 {% block content %}
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.media }}
         {{ form.as_p }}
-        {# get a bootstrap button here to create #}
         <button type="submit" class="btn btn-primary">Create</button>
     </form>
-
-
 {% endblock %}
