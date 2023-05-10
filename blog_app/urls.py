@@ -20,4 +20,9 @@ urlpatterns = [
     path("profile_detail/<int:pk>", ProfileDetail.as_view(), name="profile_detail"),
     path("profile_update/<int:pk>", ProfileUpdate.as_view(), name="profile_update"),
 
+    path("add_comment/", AddComment, name="add_comment"),
+    path("like_post/", LikePost, name="like_post"),
+    path("upload_file/", readExcelFile, name="upload_file"),
+    path("send_email", sendEmail, name="send_email"),
+
 ]
